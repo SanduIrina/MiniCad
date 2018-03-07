@@ -1,0 +1,25 @@
+____________________________________________________________________________________________________
+
+ |#|										MiniCAD                                             |#|
+ |#|									Sandu Maria Irina										|#|
+ |#|										 323 CD 											|#|
+____________________________________________________________________________________________________
+
+Implementing the requested design patterns:
+1. Singleton:
+	I used this design pattern with objects that needed to be instantiated only once( Canvas and
+	ShapeFactory).  Every shape could've been Singleton-designed since they don't dirrectly 
+	interract with the canvas or other shapes.
+2. Factory:
+	This design patters was used for instantiating different types of shapes. The class ShapeFactory
+	receives the type of the object as a String and returns the corresponding object.
+3. Visitor:
+	Last but not least, Visitor pattern was used both to initialize the stats of each shape, and
+	also to draw their outline. The reason the initialization is done here is because instead of
+	reading a string and parsing it, I was able to read the exact parameters requirred for each
+	shape just after reading their type.
+
+Other implementation details:
+	-The canvas consists of a matrix of Point-type elements. The per-se drawing of images occures at
+	the very end, the color and oppacity of each pixel being kept in the aforementioned matrix.
+	-The Bresenhams class consists of only drawing algorythms(outline and fill).
